@@ -40,3 +40,12 @@ error: this message appeared "./setup.sh: line 39: $log_file: ambiguous redirect
 The reason for the above error is bacause log_file variable was defined after the function that calls the variable.
 Solution: define the log_file variable at the begin of the script 
 It was difficult to apply color codes for success, info, warning and error but with a little research I figured it out.
+
+EOF error: While trying to run the ./setup.sh
+unexpected EOF while looking for matching `"'
+syntax error: unexpected end of file
+Solution: It was challenging to find the missing matching ". I installed shellcheck package (i.e sudo apt install shellcheck) The shellcheck is able to check and specify the line with the error after running shellcheck on setup.sh i.e shellcheck setup.sh. I had NC enclosed in different brackets [NC} instead of {NC}. See the image below
+
+<img width="254" height="108" alt="image" src="https://github.com/user-attachments/assets/ba47869d-50d9-4250-9d7f-30a21506fae6" />
+
+
